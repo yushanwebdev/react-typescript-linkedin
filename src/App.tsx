@@ -2,19 +2,26 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  let firstValue: string = "Yushan";
-  let secondValue: number = 10;
-  let thirdValue: boolean = true;
-  // array
-  let fourthValue: number[] = [1, 3, 5];
-  let fifthValue: Array<string> = ['2', '5', 'Yushan'];
+  // tuple
+  let aTuple: [string, number] = ["Yushan", 2021];
+  // enum -> To store magical values
+  enum Codes {
+    first = 1,
+    second
+  }
+  // any
+  let firstName: any = "yushan";
+  // void
+  const warning = (): void => {
+    console.log("Warning");
+  }
 
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          The value {fifthValue} is of {typeof fifthValue} type!
+          The value {firstName} is of {typeof firstName} type!
         </p>
       </header>
     </div>
