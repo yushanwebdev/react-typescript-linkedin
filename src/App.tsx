@@ -1,17 +1,28 @@
-import logo from './logo.svg';
-import Message from './Message';
+import { Component } from "react";
+import Message from "./Message";
 
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Message message="This is a simple message" />
-      </header>
-    </div>
-  );
+class App extends Component<any> {
+  componentDidMount() {
+    console.log("çomponent mounted");
+  }
+
+  componentDidUpdate() {
+    console.log("component updated.");
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <Message message="This is a simple message" />
+        </header>
+      </div>
+    );
+  }
 }
 
 export default App;
