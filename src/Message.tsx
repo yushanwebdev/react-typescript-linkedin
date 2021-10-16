@@ -1,6 +1,8 @@
-const Message = () => {
+import { ReactElement } from "react";
+
+const Message = (prop: { message: string }): ReactElement => {
     return (
-        <p>This is a quick message!!!</p>
+        <p>{prop.message}</p>
     )
 }
 
