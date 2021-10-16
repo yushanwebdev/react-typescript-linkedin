@@ -1,9 +1,16 @@
 import { ReactElement } from "react";
 
-const Message = (prop: { message: string }): ReactElement => {
-    return (
-        <p>{prop.message}</p>
-    )
+interface UserMessage {
+  name: string;
+  message: string;
 }
+
+const Message = (props: UserMessage): ReactElement => {
+  return (
+    <p>
+      {props.name}, {props.message}
+    </p>
+  );
+};
 
 export default Message;
